@@ -150,8 +150,22 @@ h2{
 .course:first-of-type{border-top:none;padding-top:0;}
 .course .cname{font-weight:500;}
 .course .cnote{color:var(--ink-soft);font-size:.95rem;}
+.course .cstats{
+  font-family:"IBM Plex Mono",monospace;font-size:.76rem;color:var(--ink-soft);
+  letter-spacing:.02em;margin-top:6px;line-height:1.5;
+}
+.prog{
+  font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent);margin:30px 0 4px;
+}
 .recognition{margin-top:26px;font-size:.95rem;color:var(--ink-soft);}
 .recognition strong{color:var(--ink);font-weight:500;}
+.award{padding:18px 0;border-top:1px solid var(--rule);}
+.award:first-of-type{border-top:none;padding-top:0;}
+.award .ayear{font-family:"IBM Plex Mono",monospace;font-size:.78rem;color:var(--accent);letter-spacing:.03em;}
+.award .aname{font-weight:500;}
+.award .adesc{color:var(--ink-soft);font-size:.94rem;margin-top:5px;}
+.award .adesc a{white-space:normal;}
 
 /* ---------- contact ---------- */
 .contact-grid{display:grid;grid-template-columns:auto 1fr;gap:12px 28px;font-size:1rem;max-width:620px;}
