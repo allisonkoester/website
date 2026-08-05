@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Allison Koester — Saleh Romeih Associate Professor of Accounting at Georgetown University's McDonough School of Business. Research on how taxation, regulation, and economic incentives shape corporate outcomes.">
+<title>Allison Koester</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FCFAF5;
+    --paper-2:#F6F2E9;
+    --ink:#1E2830;
+    --ink-soft:#5C6670;
+    --accent:#3E5C76;
+    --accent-deep:#2C4459;
+    --rule:#E4DED2;
+    --tag-bg:#EEEAE0;
+    --maxw:860px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"IBM Plex Sans",system-ui,sans-serif;
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration:none;}
+  a:hover{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px;}
+
+  /* ---------- nav ---------- */
+  header.nav{
+    position:sticky;top:0;z-index:20;
+    background:color-mix(in srgb, var(--paper) 92%, transparent);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--rule);
+  }
+  .nav-inner{
+    max-width:var(--maxw);margin:0 auto;padding:14px 24px;
+    display:flex;align-items:baseline;justify-content:space-between;gap:18px;flex-wrap:wrap;
+  }
+  .brand{
+    font-family:"Newsreader",serif;font-weight:600;font-size:1.15rem;letter-spacing:.01em;
+    color:var(--ink);white-space:nowrap;
+  }
+  .brand:hover{text-decoration:none;color:var(--ink);}
+  .nav-links{display:flex;gap:20px;flex-wrap:wrap;align-items:baseline;}
+  .nav-links a{
+    font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);
+  }
+  .nav-links a:hover{color:var(--accent-deep);text-decoration:none;}
+  .nav-links a.cv{color:var(--accent);font-weight:500;}
+
+  /* ---------- layout ---------- */
+  main{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  section{padding:56px 0;border-bottom:1px solid var(--rule);}
+  section:last-of-type{border-bottom:none;}
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--accent);margin:0 0 22px;
+  }
+  h2{
+    font-family:"Newsreader",serif;font-weight:500;font-size:1.6rem;
+    margin:0 0 24px;letter-spacing:.01em;
+  }
+
+  /* ---------- hero / about ---------- */
+  .hero{padding-top:52px;display:grid;grid-template-columns:200px 1fr;gap:40px;align-items:start;}
+  .portrait{
+    width:200px;height:240px;border-radius:3px;overflow:hidden;
+    background:linear-gradient(160deg,var(--paper-2),#EAE4D7);
+    border:1px solid var(--rule);
+    display:flex;align-items:center;justify-content:center;
+    font-family:"Newsreader",serif;font-size:2.6rem;color:#B7AE9C;
+  }
+  .portrait img{width:100%;height:100%;object-fit:cover;display:block;}
+  .hero h1{
+    font-family:"Newsreader",serif;font-weight:600;font-size:2.5rem;line-height:1.1;
+    margin:0 0 10px;letter-spacing:-.01em;
+  }
+  .role{
+    font-family:"IBM Plex Mono",monospace;font-size:.8rem;line-height:1.7;letter-spacing:.03em;
+    color:var(--ink-soft);margin:0 0 24px;
+  }
+  .role .inst{color:var(--accent-deep);}
+  .bio p{margin:0 0 16px;}
+  .bio p:last-child{margin-bottom:0;}
+
+  /* ---------- paper ledger ---------- */
+  .paper{
+    padding:20px 0;border-top:1px solid var(--rule);
+    display:grid;grid-template-columns:1fr auto;gap:6px 20px;
+  }
+  .paper:first-of-type{border-top:none;padding-top:0;}
+  .paper .title{font-weight:500;grid-column:1;}
+  .paper .authors{
+    grid-column:1;color:var(--ink-soft);font-size:.95rem;margin-top:2px;
+  }
+  .paper .meta{
+    grid-column:1;font-family:"IBM Plex Mono",monospace;font-size:.78rem;
+    color:var(--ink-soft);letter-spacing:.02em;margin-top:6px;
+  }
+  .paper .meta a{font-family:inherit;}
+  .tag{
+    grid-column:2;grid-row:1;align-self:start;justify-self:end;
+    font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.08em;
+    text-transform:uppercase;padding:3px 9px;border-radius:2px;white-space:nowrap;
+    background:var(--tag-bg);color:var(--ink-soft);border:1px solid var(--rule);
+  }
+  .tag.pub{background:#E4EBEF;color:var(--accent-deep);border-color:#CBD9E2;}
+  .tag.rr{background:#EFEAE0;color:#7A5A2E;border-color:#E1D4BC;}
+  .section-lead{margin:0 0 26px;color:var(--ink-soft);font-size:.98rem;}
+  .section-lead a{white-space:nowrap;}
+
+  /* ---------- teaching ---------- */
+  .course{padding:14px 0;border-top:1px solid var(--rule);}
+  .course:first-of-type{border-top:none;padding-top:0;}
+  .course .cname{font-weight:500;}
+  .course .cnote{color:var(--ink-soft);font-size:.95rem;}
+  .recognition{margin-top:24px;font-size:.95rem;color:var(--ink-soft);}
+  .recognition strong{color:var(--ink);font-weight:500;}
+
+  /* ---------- contact / footer ---------- */
+  .contact-grid{display:grid;grid-template-columns:auto 1fr;gap:10px 28px;font-size:.98rem;}
+  .contact-grid dt{font-family:"IBM Plex Mono",monospace;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);padding-top:4px;}
+  .contact-grid dd{margin:0;}
+  footer{
+    max-width:var(--maxw);margin:0 auto;padding:26px 24px 48px;
+    border-top:1px solid var(--rule);
+    font-family:"IBM Plex Mono",monospace;font-size:.74rem;letter-spacing:.04em;
+    color:var(--ink-soft);
+  }
+
+  @media (max-width:640px){
+    .hero{grid-template-columns:1fr;gap:24px;}
+    .portrait{width:150px;height:180px;}
+    .hero h1{font-size:2rem;}
+    .nav-inner{padding:12px 20px;}
+    main{padding:0 20px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand">Allison Koester</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#working">Working Papers</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#contact">Contact</a>
+      <a href="CV.pdf" class="cv">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="hero" id="about">
+    <div class="portrait">
+      <!-- Replace the AK below with: <img src="photo.jpg" alt="Allison Koester"> -->
+      AK
+    </div>
+    <div>
+      <h1>Allison Koester</h1>
+      <p class="role">
+        Saleh Romeih Associate Professor of Accounting<br>
+        Dean&rsquo;s Research Fellow<br>
+        <span class="inst">Georgetown University &middot; McDonough School of Business</span>
+      </p>
+      <div class="bio">
+        <p>Allison Koester is the Saleh Romeih Associate Professor of Accounting and a Dean&rsquo;s Research Fellow at Georgetown University&rsquo;s McDonough School of Business.</p>
+        <p>Her research considers how taxation, economic incentives, legislation, and regulation shape corporate economic activity and outcomes. Her work has appeared in <em>The Accounting Review</em>, the <em>Journal of Accounting and Economics</em>, <em>The Journal of Law and Economics</em>, <em>Management Science</em>, and the <em>Review of Accounting Studies</em>. It has been cited in Securities and Exchange Commission releases and a Government Accountability Office report, and covered by outlets including the <em>Wall Street Journal</em>. She has presented her research at more than 90 academic institutions and conferences.</p>
+        <p>She has taught corporate financial reporting to more than 3,700 students in Georgetown&rsquo;s MBA and Executive MBA programs. She earned her Ph.D. at the University of Washington and previously worked as a tax consultant at KPMG.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RESEARCH / PUBLISHED ===================== -->
+  <!-- Paste your publications here from your CV. Each entry is one .paper block.
+       Status tag classes: "tag pub" (Published/Forthcoming) · "tag rr" (R&R) · "tag" (Working Paper). -->
+  <section id="research">
+    <p class="eyebrow">Published &amp; Forthcoming</p>
+    <h2>Research</h2>
+    <p class="section-lead">Selected publications below; a complete and current list is on <a href="https://scholar.google.com/citations?user=suxdrxcAAAAJ&amp;hl=en">Google Scholar</a>.</p>
+
+    <div class="paper">
+      <div class="title"><a href="#">[Paper Title]</a></div>
+      <div class="authors">with [Coauthor], [Coauthor]</div>
+      <div class="meta">[Journal Name], [Year], [Vol], [pp.] &middot; <a href="#">SSRN</a> &middot; <a href="#">DOI</a></div>
+      <span class="tag pub">Published</span>
+    </div>
+
+    <div class="paper">
+      <div class="title"><a href="#">[Paper Title]</a></div>
+      <div class="authors">with [Coauthor]</div>
+      <div class="meta">[Journal Name], forthcoming &middot; <a href="#">SSRN</a></div>
+      <span class="tag pub">Forthcoming</span>
+    </div>
+  </section>
+
+  <!-- ===================== WORKING PAPERS ===================== -->
+  <section id="working">
+    <p class="eyebrow">Under Review &amp; In Progress</p>
+    <h2>Working Papers</h2>
+
+    <div class="paper">
+      <div class="title"><a href="#">[Working Paper Title]</a></div>
+      <div class="authors">with [Coauthor], [Coauthor]</div>
+      <div class="meta">Revise &amp; resubmit, [Journal] &middot; <a href="#">SSRN</a> &middot; accessed [Month Year]</div>
+      <span class="tag rr">R&amp;R</span>
+    </div>
+
+    <div class="paper">
+      <div class="title"><a href="#">[Working Paper Title]</a></div>
+      <div class="authors">with [Coauthor]</div>
+      <div class="meta">Working paper, [Year] &middot; <a href="#">SSRN</a> &middot; accessed [Month Year]</div>
+      <span class="tag">Working Paper</span>
+    </div>
+  </section>
+
+  <!-- ===================== TEACHING ===================== -->
+  <section id="teaching">
+    <p class="eyebrow">Courses</p>
+    <h2>Teaching</h2>
+
+    <div class="course">
+      <span class="cname">Corporate Financial Reporting</span> —
+      <span class="cnote">MBA &amp; Executive MBA, Georgetown McDonough</span>
+    </div>
+    <!-- Add more courses by copying the block above. -->
+
+    <p class="recognition">
+      <strong>Recognition:</strong> MBA Excellence in Teaching Award (2024, 2019) &middot;
+      Joseph F. Lemoine Award for Undergraduate and Graduate Teaching Excellence (2020) &middot;
+      Poets &amp; Quants Favorite EMBA Professor (2024) &amp; Favorite MBA Professor (2020) &middot;
+      40-under-40 Most Outstanding Business School Professor (2016).
+    </p>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact">
+    <p class="eyebrow">Get in touch</p>
+    <h2>Contact</h2>
+    <dl class="contact-grid">
+      <dt>Email</dt><dd><a href="mailto:allison.koester@georgetown.edu">allison.koester@georgetown.edu</a></dd>
+      <dt>Office</dt><dd>Rafik B. Hariri Building, McDonough School of Business<br>37th and O Streets, N.W., Washington, DC 20057</dd>
+      <dt>Elsewhere</dt><dd><a href="https://scholar.google.com/citations?user=suxdrxcAAAAJ&amp;hl=en">Google Scholar</a> &middot; <a href="#">SSRN</a> &middot; <a href="CV.pdf">CV (PDF)</a></dd>
+    </dl>
+  </section>
+
+</main>
+
+<footer>
+  © 2026 Allison Koester &middot; Saleh Romeih Associate Professor of Accounting, Georgetown University
+</footer>
+
+</body>
+</html>
