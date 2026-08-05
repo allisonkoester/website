@@ -3,174 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Allison Koester — Associate Professor of Accounting and Dean's Research Fellow at Georgetown University's McDonough School of Business. Research on how taxation, government financial assistance, legislation, and regulation shape corporate outcomes.">
+<meta name="description" content="Allison Koester — Associate Professor of Accounting and Dean's Research Fellow at Georgetown University's McDonough School of Business.">
 <title>Allison Koester</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --paper:#FCFAF5;
-    --paper-2:#F6F2E9;
-    --ink:#1E2830;
-    --ink-soft:#5C6670;
-    --accent:#3E5C76;
-    --accent-deep:#2C4459;
-    --rule:#E4DED2;
-    --tag-bg:#EEEAE0;
-    --maxw:860px;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:"IBM Plex Sans",system-ui,sans-serif;
-    font-size:17px;
-    line-height:1.65;
-    -webkit-font-smoothing:antialiased;
-  }
-  a{color:var(--accent);text-decoration:none;}
-  a:hover{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;}
-  a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px;}
-
-  /* ---------- nav ---------- */
-  header.nav{
-    position:sticky;top:0;z-index:20;
-    background:color-mix(in srgb, var(--paper) 92%, transparent);
-    backdrop-filter:blur(6px);
-    border-bottom:1px solid var(--rule);
-  }
-  .nav-inner{
-    max-width:var(--maxw);margin:0 auto;padding:14px 24px;
-    display:flex;align-items:baseline;justify-content:space-between;gap:18px;flex-wrap:wrap;
-  }
-  .brand{
-    font-family:"Newsreader",serif;font-weight:600;font-size:1.15rem;letter-spacing:.01em;
-    color:var(--ink);white-space:nowrap;
-  }
-  .brand:hover{text-decoration:none;color:var(--ink);}
-  .nav-links{display:flex;gap:20px;flex-wrap:wrap;align-items:baseline;}
-  .nav-links a{
-    font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);
-  }
-  .nav-links a:hover{color:var(--accent-deep);text-decoration:none;}
-  .nav-links a.cv{color:var(--accent);font-weight:500;}
-
-  /* ---------- layout ---------- */
-  main{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
-  section{padding:56px 0;border-bottom:1px solid var(--rule);}
-  section:last-of-type{border-bottom:none;}
-  .eyebrow{
-    font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.16em;
-    text-transform:uppercase;color:var(--accent);margin:0 0 22px;
-  }
-  h2{
-    font-family:"Newsreader",serif;font-weight:500;font-size:1.6rem;
-    margin:0 0 24px;letter-spacing:.01em;
-  }
-
-  /* ---------- hero / about ---------- */
-  .hero{padding-top:52px;display:grid;grid-template-columns:200px 1fr;gap:40px;align-items:start;}
-  .portrait{
-    width:200px;height:240px;border-radius:3px;overflow:hidden;
-    background:linear-gradient(160deg,var(--paper-2),#EAE4D7);
-    border:1px solid var(--rule);
-    display:flex;align-items:center;justify-content:center;
-    font-family:"Newsreader",serif;font-size:2.6rem;color:#B7AE9C;
-  }
-  .portrait img{width:100%;height:100%;object-fit:cover;display:block;}
-  .hero h1{
-    font-family:"Newsreader",serif;font-weight:600;font-size:2.5rem;line-height:1.1;
-    margin:0 0 10px;letter-spacing:-.01em;
-  }
-  .role{
-    font-family:"IBM Plex Mono",monospace;font-size:.8rem;line-height:1.7;letter-spacing:.03em;
-    color:var(--ink-soft);margin:0 0 24px;
-  }
-  .role .inst{color:var(--accent-deep);}
-  .bio p{margin:0 0 16px;}
-  .bio p:last-child{margin-bottom:0;}
-
-  /* ---------- paper ledger ---------- */
-  .paper{
-    padding:20px 0;border-top:1px solid var(--rule);
-    display:grid;grid-template-columns:1fr auto;gap:6px 20px;
-  }
-  .paper:first-of-type{border-top:none;padding-top:0;}
-  .paper .title{font-weight:500;grid-column:1;}
-  .paper .authors{
-    grid-column:1;color:var(--ink-soft);font-size:.95rem;margin-top:2px;
-  }
-  .paper .meta{
-    grid-column:1;font-family:"IBM Plex Mono",monospace;font-size:.78rem;
-    color:var(--ink-soft);letter-spacing:.02em;margin-top:6px;line-height:1.5;
-  }
-  .paper .meta a{font-family:inherit;}
-  .paper .feat{
-    grid-column:1;font-size:.85rem;font-style:italic;color:var(--ink-soft);margin-top:5px;
-  }
-  .tag{
-    grid-column:2;grid-row:1;align-self:start;justify-self:end;
-    font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.08em;
-    text-transform:uppercase;padding:3px 9px;border-radius:2px;white-space:nowrap;
-    background:var(--tag-bg);color:var(--ink-soft);border:1px solid var(--rule);
-  }
-  .tag.pub{background:#E4EBEF;color:var(--accent-deep);border-color:#CBD9E2;}
-  .tag.rr{background:#EFEAE0;color:#7A5A2E;border-color:#E1D4BC;}
-  .section-lead{margin:0 0 26px;color:var(--ink-soft);font-size:.98rem;}
-  .section-lead a{white-space:nowrap;}
-
-  /* ---------- teaching ---------- */
-  .course{padding:14px 0;border-top:1px solid var(--rule);}
-  .course:first-of-type{border-top:none;padding-top:0;}
-  .course .cname{font-weight:500;}
-  .course .cnote{color:var(--ink-soft);font-size:.95rem;}
-  .recognition{margin-top:24px;font-size:.95rem;color:var(--ink-soft);}
-  .recognition strong{color:var(--ink);font-weight:500;}
-
-  /* ---------- contact / footer ---------- */
-  .contact-grid{display:grid;grid-template-columns:auto 1fr;gap:10px 28px;font-size:.98rem;}
-  .contact-grid dt{font-family:"IBM Plex Mono",monospace;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);padding-top:4px;}
-  .contact-grid dd{margin:0;}
-  footer{
-    max-width:var(--maxw);margin:0 auto;padding:26px 24px 48px;
-    border-top:1px solid var(--rule);
-    font-family:"IBM Plex Mono",monospace;font-size:.74rem;letter-spacing:.04em;
-    color:var(--ink-soft);
-  }
-
-  @media (max-width:640px){
-    .hero{grid-template-columns:1fr;gap:24px;}
-    .portrait{width:150px;height:180px;}
-    .hero h1{font-size:2rem;}
-    .nav-inner{padding:12px 20px;}
-    main{padding:0 20px;}
-  }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
 <header class="nav">
   <div class="nav-inner">
-    <a href="#top" class="brand">Allison Koester</a>
+    <a href="index.html" class="brand">Allison Koester</a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#working">Working Papers</a>
-      <a href="#teaching">Teaching</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="research.html">Research</a>
+      <a href="working-papers.html">Working Papers</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="contact.html">Contact</a>
       <a href="CV.pdf" class="cv">CV</a>
     </nav>
   </div>
 </header>
 
-<main id="top">
-
-  <!-- ===================== ABOUT ===================== -->
-  <section class="hero" id="about">
+<main>
+  <section class="hero">
     <div class="portrait">
       <img src="photo.jpg" alt="Allison Koester">
     </div>
@@ -186,209 +42,18 @@
         <p>Her research considers how taxation, government financial assistance, legislation, and regulation shape corporate economic activity and outcomes. Her work has appeared in <em>The Accounting Review</em>, the <em>Journal of Accounting and Economics</em>, <em>The Journal of Law and Economics</em>, <em>Management Science</em>, and the <em>Review of Accounting Studies</em>, and has been cited in Securities and Exchange Commission releases and a Government Accountability Office report and covered by outlets including the <em>Wall Street Journal</em>. She has given more than 100 research presentations at university seminars and academic conferences.</p>
         <p>She has taught corporate financial reporting to more than 3,700 students in Georgetown&rsquo;s MBA and Executive MBA programs. She earned her Ph.D. at the University of Washington and previously worked as a tax consultant at KPMG.</p>
       </div>
+      <p class="quicklinks">
+        <a href="research.html">Research</a> &middot;
+        <a href="working-papers.html">Working Papers</a> &middot;
+        <a href="CV.pdf">CV</a> &middot;
+        <a href="https://scholar.google.com/citations?user=suxdrxcAAAAJ&amp;hl=en">Google Scholar</a>
+      </p>
     </div>
   </section>
-
-  <!-- ===================== RESEARCH / PUBLISHED ===================== -->
-  <section id="research">
-    <p class="eyebrow">Peer-Reviewed Publications</p>
-    <h2>Research</h2>
-    <p class="section-lead">Most recent first. A complete and current list is on <a href="https://scholar.google.com/citations?user=suxdrxcAAAAJ&amp;hl=en">Google Scholar</a>.</p>
-
-    <div class="paper">
-      <div class="title"><a href="https://doi.org/10.2308/TAR-2021-0646">GAAP earnings forecast quality: Implications for research</a></div>
-      <div class="authors">with Xi (Novia) Chen</div>
-      <div class="meta"><em>The Accounting Review</em>, 2026 &middot; 101(1): 169&ndash;201 &middot; <a href="https://doi.org/10.2308/TAR-2021-0646">DOI</a></div>
-      <span class="tag pub">Published</span>
-    </div>
-
-    <div class="paper">
-      <div class="title"><a href="https://doi.org/10.2308/TAR-2021-0472">Accounting standardization and separation in the municipal debt market: Evidence from GASB 34</a></div>
-      <div class="authors">with Bill Baber and Amanda Beck</div>
-      <div class="meta"><em>The Accounting Review</em>, 2024 &middot; 99(4): 29&ndash;56 &middot; <a href="https://doi.org/10.2308/TAR-2021-0472">DOI</a></div>
-      <span class="tag pub">Published</span>
-    </div>
-
-    <div class="paper">
-      <div class="title"><a href="https://doi.org/10.1086/730425">Political connections and the effectiveness of U.S. state government resource allocation</a></div>
-      <div class="authors">with Daniel Aobdia and Reining Petacchi</div>
-      <div class="meta"><em>The Journal of Law and Economics</em>, 2024 &middot; 67(3): 639&ndash;689 &middot; <a href="https://doi.org/10.1086/730425">DOI</a></div>
-      <div class="feat">Featured in <a href="https://promarket.org/who-benefits-when-state-governments-award-incentives-to-politically-connected-companies/">ProMarket.org</a></div>
-      <span class="tag pub">Published</span>
-    </div>
-
-    <div class="paper">
-      <div class="title"><a href="https://doi.org/10.2308/AJPT-2020-071">Tax non-audit services and client income tax estimation error</a></div>
-      <div class="authors">with Preeti Choudhary and Robert Pawlewicz</div>
-      <div class="meta"><em>Auditing: A Journal of Practice &amp; Theory</em>, 2022 &middot; 41(2): 113&ndash;139 &middot; <a href="https://doi.org/10.2308/AJPT-2020-071">DOI</a></div>
-      <div class="feat">Featured in <em>Tax Notes</em></div>
-      <span class="tag pub">Published</span>
-    </div>
-
-    <div class="paper">
-      <div class="title"><a href="https://meridian.allenpress.com/jata/article/44/1/155/479523/Discussion-of-Dhaliwal-Goodman-Hoffman-and-Schwab">Discussion of Dhaliwal, Goodman, Hoffman, and Schwab (2019): Revisiting tax-related reputational costs</a></div>
-      <div class="authors">sole-authored</div>
-      <div class="meta"><em>Journal of the American Taxation Association</em>, 2022 &middot; 44(1): 155&ndash;160 &middot; <a href="https://meridian.allenpress.com/jata/article/44/1/155/479523/Discussion-of-Dhaliwal-Goodman-Hoffman-and-Schwab">Link</a></div>
-      <span class="tag pub">Published</span>
-    </div>
-
-    <div class="paper">
-      <div class="title"><a href="https://doi.org/10.2308/accr-51766">Proxies and databases in financial misconduct research</a></div>
-      <div class="authors">with Jonathan M. Karpoff, D. Scott Lee, and Gerald S. Martin</div>
-      <div class="meta"><em>The Accounting Review</em>, 2017 &middot; 92(6): 129&ndash;163 &middot; <a href="https://doi.org/10.2308/accr-51766">DOI</a></div>
-      <div class="feat">Featured in <em>Alpha Architect</em> and the <em>Harvard Law School Forum on Corporate Governance</em></div>
-      <span class="tag pub">Published</span>
-    </div>
-
-    <div class="paper">
-      <div class="title"><a href="https://dx.doi.org/10.1016/j.jacceco.2017.01.001">Benefits and costs of Sarbanes-Oxley Section 404(b) exemption: Evidence from small firms&rsquo; internal control disclosures</a></div>
-      <div class="authors">with Weili Ge and Sarah McVay</div>
-      <div class="meta"><em>Journal of Accounting and Economics</em>, 2017 &middot; 63(2&ndash;3): 358&ndash;384 &middot; <a href="https://dx.doi.org/10.1016/j.jacceco.2017.01.001">DOI</a></div>
-      <div class="feat">Featured in the <em>Wall Street Journal</em> and SEC Release No. 34-85814</div>
-      <span class="tag pub">Published</span>
-    </div>
-
-    <div class="paper">
-      <div class="title"><a href="https://doi.org/10.1287/mnsc.2016.2510">The role of managerial ability in corporate tax avoidance</a></div>
-      <div class="authors">with Terry Shevlin and Daniel Wangerin</div>
-      <div class="meta"><em>Management Science</em>, 2017 &middot; 63(10): 3285&ndash;3310 &middot; <a href="https://doi.org/10.1287/mnsc.2016.2510">DOI</a></div>
-      <div class="feat">Featured in the <em>Huffington Post</em></div>
-      <span class="tag pub">Published</span>
-    </div>
-
-    <div class="paper">
-      <div class="title"><a href="http://dx.doi.org/10.1287/mnsc.2015.2286">Attracting attention in a limited attention world: Exploring the causes and consequences of extreme positive earnings surprises</a></div>
-      <div class="authors">with Russ Lundholm and Mark Soliman</div>
-      <div class="meta"><em>Management Science</em>, 2016 &middot; 62(10): 2871&ndash;2896 &middot; <a href="http://dx.doi.org/10.1287/mnsc.2015.2286">DOI</a></div>
-      <div class="feat">Featured in <em>Inside Investor Relations</em></div>
-      <span class="tag pub">Published</span>
-    </div>
-
-    <div class="paper">
-      <div class="title"><a href="https://doi.org/10.1007/s11142-015-9336-9">Measuring income tax accrual quality</a></div>
-      <div class="authors">with Preeti Choudhary and Terry Shevlin</div>
-      <div class="meta"><em>Review of Accounting Studies</em>, 2016 &middot; 21(1): 89&ndash;139 &middot; <a href="https://doi.org/10.1007/s11142-015-9336-9">DOI</a></div>
-      <span class="tag pub">Published</span>
-    </div>
-
-    <div class="paper">
-      <div class="title"><a href="https://dx.doi.org/10.2308/atax-50952">The effect of tax-related material weakness in internal controls on the market valuation of unrecognized tax benefits</a></div>
-      <div class="authors">with Steve Lim and Robert Vigeland</div>
-      <div class="meta"><em>Journal of the American Taxation Association</em>, 2015 &middot; 37(1): 129&ndash;155 &middot; <a href="https://dx.doi.org/10.2308/atax-50952">DOI</a></div>
-      <span class="tag pub">Published</span>
-    </div>
-  </section>
-
-  <!-- ===================== WORKING PAPERS ===================== -->
-  <section id="working">
-    <p class="eyebrow">Under Review &amp; In Progress</p>
-    <h2>Working Papers</h2>
-
-    <div class="paper">
-      <div class="title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4473848">Corporate delegation of decision rights and firm performance</a></div>
-      <div class="authors">with Junwei Xia</div>
-      <div class="meta">Revise &amp; resubmit, 3rd round (FT50 journal) &middot; <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4473848">SSRN</a></div>
-      <span class="tag rr">R&amp;R</span>
-    </div>
-
-    <div class="paper">
-      <div class="title"><a href="https://papers.ssrn.com/abstract=6995458">Corporate competitive externalities of US government financial assistance</a></div>
-      <div class="authors">with Elisa Casi and Costanza Cincotta</div>
-      <div class="meta">Revise &amp; resubmit, 2nd round (FT50 journal) &middot; <a href="https://papers.ssrn.com/abstract=6995458">SSRN</a></div>
-      <span class="tag rr">R&amp;R</span>
-    </div>
-
-    <div class="paper">
-      <div class="title">Competitive effects of rival firms&rsquo; negative tax news</div>
-      <div class="authors">with Preetika Joshi</div>
-      <div class="meta">Under review (FT50 journal)</div>
-      <span class="tag">Under Review</span>
-    </div>
-
-    <div class="paper">
-      <div class="title"><a href="https://aaahq.org/portals/0/documents/meetings/2026/ATA/3.02%20-%20Government%20Environmental%20Financial%20Assistance%20and%20Corporate%20Environmental%20Performance.pdf">Government environmental financial assistance and corporate environmental performance</a></div>
-      <div class="authors">with Costanza Cincotta</div>
-      <div class="meta">Working paper &middot; <a href="https://aaahq.org/portals/0/documents/meetings/2026/ATA/3.02%20-%20Government%20Environmental%20Financial%20Assistance%20and%20Corporate%20Environmental%20Performance.pdf">Paper (PDF)</a></div>
-      <span class="tag">Working Paper</span>
-    </div>
-
-    <div class="paper">
-      <div class="title">Proposed organizational change and audit quality: An examination of EY&rsquo;s Project Everest</div>
-      <div class="authors">with Jessica Filosa, Nathan Goldman, and Andrew Imdieke</div>
-      <div class="meta">Working paper</div>
-      <span class="tag">Working Paper</span>
-    </div>
-
-    <div class="paper">
-      <div class="title">Government procurement sensitivity to corporate contractors&rsquo; negative reputation incidents</div>
-      <div class="authors">with Muhammad Azim and Preetika Joshi</div>
-      <div class="meta">Working paper</div>
-      <span class="tag">Working Paper</span>
-    </div>
-  </section>
-
-  <!-- ===================== BOOKS & OTHER WRITING ===================== -->
-  <section id="books">
-    <p class="eyebrow">Edited Volumes &amp; Other Writing</p>
-    <h2>Books &amp; Other Writing</h2>
-
-    <div class="paper">
-      <div class="title"><a href="https://www.e-elgar.com/shop/usd/handbook-on-the-financial-reporting-environment-9781800888678.html">Handbook on the Financial Reporting Environment</a></div>
-      <div class="authors">edited by Weili Ge, Allison Koester, and Sarah McVay</div>
-      <div class="meta">Edward Elgar Publishing, 2025</div>
-      <span class="tag">Editor</span>
-    </div>
-
-    <div class="paper">
-      <div class="title"><a href="https://ssrn.com/abstract=5023922">Financial reporting effects of tax planning and execution</a></div>
-      <div class="authors">with Terry Shevlin and Ryan Wilson</div>
-      <div class="meta">Chapter 6 in the <em>Handbook on the Financial Reporting Environment</em>, 2025 &middot; <a href="https://ssrn.com/abstract=5023922">SSRN</a></div>
-      <span class="tag">Chapter</span>
-    </div>
-
-    <div class="paper">
-      <div class="title"><a href="https://www.taxnotes.com/tax-notes-transfer-pricing-center/information-reporting/examining-investor-reaction-irs-announcement-2010-09/2010/05/11/jsfb">Examining investor reaction to IRS Announcement 2010-09</a></div>
-      <div class="authors">with Alexander Edwards and Terry Shevlin</div>
-      <div class="meta"><em>Tax Notes</em>, May 2010 &middot; 669&ndash;674</div>
-      <span class="tag">Practitioner</span>
-    </div>
-  </section>
-
-  <!-- ===================== TEACHING ===================== -->
-  <section id="teaching">
-    <p class="eyebrow">Courses</p>
-    <h2>Teaching</h2>
-
-    <div class="course">
-      <span class="cname">Corporate Financial Reporting</span> —
-      <span class="cnote">MBA &amp; Executive MBA, Georgetown McDonough</span>
-    </div>
-    <!-- Add more courses by copying the block above. -->
-
-    <p class="recognition">
-      <strong>Recognition:</strong> MBA Excellence in Teaching Award (2024, 2019) &middot;
-      Joseph F. Lemoine Award for Undergraduate and Graduate Teaching Excellence (2020) &middot;
-      Poets &amp; Quants Favorite EMBA Professor (2024) &amp; Favorite MBA Professor (2020) &middot;
-      40-under-40 Most Outstanding Business School Professor (2016).
-    </p>
-  </section>
-
-  <!-- ===================== CONTACT ===================== -->
-  <section id="contact">
-    <p class="eyebrow">Get in touch</p>
-    <h2>Contact</h2>
-    <dl class="contact-grid">
-      <dt>Email</dt><dd><a href="mailto:allison.koester@georgetown.edu">allison.koester@georgetown.edu</a></dd>
-      <dt>Office</dt><dd>Rafik B. Hariri Building, McDonough School of Business<br>37th and O Streets, N.W., Washington, DC 20057</dd>
-      <dt>Elsewhere</dt><dd><a href="https://scholar.google.com/citations?user=suxdrxcAAAAJ&amp;hl=en">Google Scholar</a> &middot; <a href="#">SSRN</a> &middot; <a href="CV.pdf">CV (PDF)</a></dd>
-    </dl>
-  </section>
-
 </main>
 
 <footer>
   © 2026 Allison Koester &middot; Associate Professor of Accounting, Georgetown University
 </footer>
-
 </body>
 </html>
