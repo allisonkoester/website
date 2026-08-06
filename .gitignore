@@ -1,0 +1,4 @@
+  *.docx
+  *.docm
+  ~$*
+  .DS_Store
