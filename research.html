@@ -43,28 +43,46 @@
 
   /* Press & Policy strip */
   .pressbar{
-    margin:20px 0 30px;padding:16px 18px;
+    margin:20px 0 30px;padding:14px 18px;
     border:1px solid var(--rule);border-left:3px solid #041E42;
     background:linear-gradient(160deg,#EDF1F7,#ECECEE);
     border-radius:4px;
   }
+  .pressbar .pbrow{padding:6px 0;}
+  .pressbar .pbrow + .pbrow{border-top:1px solid #D9DBDE;margin-top:8px;padding-top:14px;}
   .pressbar .plabel{
-    display:block;font-family:"IBM Plex Mono",monospace;font-size:.66rem;
-    letter-spacing:.12em;text-transform:uppercase;color:#041E42;margin-bottom:9px;
+    display:block;font-family:"Newsreader",serif;font-weight:600;font-size:1rem;
+    letter-spacing:.005em;text-transform:none;color:#041E42;margin-bottom:10px;
   }
   .pressbar .plogos{
     list-style:none;margin:0;padding:0;
     display:flex;flex-wrap:wrap;gap:8px 16px;
-    font-size:.9rem;color:var(--ink);
+    font-size:.92rem;color:var(--ink);
   }
-  .pressbar .plogos li{
-    display:inline-flex;align-items:baseline;gap:5px;
-  }
-  .pressbar .plogos li + li::before{
+  .pressbar .plogos li{display:inline-flex;align-items:baseline;gap:5px;}
+  .pressbar .plogos li::before{
     content:"\00B7";color:var(--ink-soft);margin-right:11px;
   }
-  .pressbar .pn{font-family:"IBM Plex Mono",monospace;font-size:.8rem;color:var(--ink-soft);}
+  .pressbar .plogos li:first-child::before{margin-left:0;}
+  .pressbar .plogos a{color:var(--ink);text-decoration:none;border-bottom:1px solid #C6D0DB;padding-bottom:1px;}
+  .pressbar .plogos a:hover{color:#041E42;border-bottom-color:#041E42;}
+  .pressbar .pn{font-family:"IBM Plex Mono",monospace;font-size:.82rem;color:var(--ink-soft);}
+  .pressbar .plogos a .pn{color:inherit;}
   .pressbar .psub{font-size:.78rem;color:var(--ink-soft);}
+  /* Publications boxes (peer-reviewed / non-peer-reviewed) */
+  .pubbox{
+    margin:0 0 24px;padding:22px 22px 18px;
+    border:1px solid var(--rule);border-left:3px solid #041E42;
+    background:linear-gradient(160deg,#EDF1F7,#ECECEE);
+    border-radius:4px;
+    counter-reset:paperno;
+  }
+  .pubbox .pubs-head{
+    font-family:"Newsreader",serif;font-weight:600;font-size:1.25rem;
+    color:#041E42;letter-spacing:.005em;margin:0 0 14px;padding:0;border:none;
+  }
+  .pubbox .paper{border-top:1px solid #D9DBDE;}
+  .pubbox .paper:first-of-type{border-top:none;}
 </style>
 </head>
 <body>
@@ -87,19 +105,30 @@
     <h2>Published Research</h2>
     <p class="section-lead">My research considers how taxation, government financial assistance, legislation, and regulation shape corporate economic activity and outcomes.</p>
     <div class="pressbar">
-      <span class="plabel">In the Press &amp; Policy</span>
-      <ul class="plogos">
-        <li>SEC Release <span class="pn">34-85814</span></li>
-        <li>GAO Report <span class="pn">25-107500</span></li>
-        <li><em>Wall Street Journal</em></li>
-        <li>Harvard Law School Forum</li>
-        <li><em>Tax Notes</em></li>
-        <li>ProMarket <span class="psub">(Univ. of Chicago Stigler Center)</span></li>
-        <li><em>Huffington Post</em></li>
-        <li><em>Inside Investor Relations</em></li>
-        <li>Alpha Architect</li>
-      </ul>
+      <div class="pbrow">
+        <span class="plabel">My research informing government policy</span>
+        <ul class="plogos">
+          <li><a href="https://www.sec.gov/rules/final/2020/34-88365.pdf">SEC Release <span class="pn">34-88365</span></a></li>
+          <li><a href="https://www.sec.gov/rules/proposed/2019/34-85814.pdf">SEC Release <span class="pn">34-85814</span></a></li>
+          <li><a href="https://www.gao.gov/products/gao-25-107500">GAO Report <span class="pn">25-107500</span></a></li>
+        </ul>
+      </div>
+      <div class="pbrow">
+        <span class="plabel">My research discussed in the press</span>
+        <ul class="plogos">
+          <li><a href="https://www.wsj.com/articles/sec-moves-to-ease-accounting-requirements-for-smaller-companies-11557411945"><em>Wall Street Journal</em></a></li>
+          <li><em>Tax Notes</em></li>
+          <li><a href="http://www.huffingtonpost.com/allison-koester/managers-save-money_b_5226798.html"><em>Huffington Post</em></a></li>
+          <li><em>Inside Investor Relations</em></li>
+          <li><a href="https://corpgov.law.harvard.edu/2017/06/01/proxies-and-databases-in-financial-misconduct-research/">Harvard Law School Forum</a></li>
+          <li><a href="https://promarket.org/who-benefits-when-state-governments-award-incentives-to-politically-connected-companies/">ProMarket <span class="psub">(Univ. of Chicago Stigler Center)</span></a></li>
+          <li><a href="https://alphaarchitect.com/2018/01/22/academic-research-insight-results-financial-misconduct-depend-database-one-uses/">Alpha Architect</a></li>
+        </ul>
+      </div>
     </div>
+
+        <div class="pubbox">
+      <h3 class="pubs-head">Peer Reviewed Publications</h3>
       <div class="paper">
       <div class="title"><a href="https://doi.org/10.2308/TAR-2021-0646">GAAP earnings forecast quality: Implications for research</a></div>
       <div class="meta"><em>The Accounting Review</em>, 2026 &middot; 101(1): 169&ndash;201</div>
@@ -110,7 +139,7 @@
       </div>
     </div>
 
-    <div class="paper">
+      <div class="paper">
       <div class="title"><a href="https://doi.org/10.2308/TAR-2021-0472">Accounting standardization and separation in the municipal debt market: Evidence from GASB 34</a></div>
       <div class="meta"><em>The Accounting Review</em>, 2024 &middot; 99(4): 29&ndash;56</div>
       <div class="authors">with Bill Baber and Amanda Beck</div>
@@ -210,7 +239,10 @@
       </div>
     </div>
 
-    <h3 class="subhead">Articles</h3>
+    </div>
+
+    <div class="pubbox">
+      <h3 class="pubs-head">Non-Peer Reviewed Publications</h3>
 
     <div class="paper">
       <div class="title"><a href="https://www.e-elgar.com/shop/usd/handbook-on-the-financial-reporting-environment-9781800888678.html">Handbook on the Financial Reporting Environment</a></div>
@@ -233,6 +265,7 @@
       <div class="meta"><em>Tax Notes</em>, May 2010 &middot; 669&ndash;674</div>
       <div class="authors">with Alexander Edwards and Terry Shevlin</div>
     </div>
+  </div>
   </section>
 </main>
 
