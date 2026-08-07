@@ -9,6 +9,37 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+  /* Working Papers page: match Published Research styling */
+  .page h2{font-family:"Newsreader",serif;font-weight:500;font-size:1.7rem;margin:0 0 20px;letter-spacing:.01em;}
+  .page .paper .meta{font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:.95rem;letter-spacing:normal;color:var(--ink-soft);margin-top:6px;}
+  .page .paper .authors{margin-top:4px;}
+  .page .paper .title{font-size:1.12rem;line-height:1.35;}
+  .page .paper .title a{font-weight:500;}
+  .page .disclosures summary{font-family:"IBM Plex Sans",system-ui,sans-serif;}
+
+  /* Numbered ledger inside the box */
+  .pubbox{
+    margin:0 0 24px;padding:20px 22px 16px;
+    border:1px solid var(--rule);border-left:3px solid #041E42;
+    background:linear-gradient(160deg,#EDF1F7,#ECECEE);
+    border-radius:4px;
+    counter-reset:paperno;
+  }
+  .pubbox .paper{
+    counter-increment:paperno;position:relative;padding:20px 0 20px 34px;
+    border-top:1px solid #D9DBDE;
+  }
+  .pubbox .paper:first-of-type{border-top:none;padding-top:2px;}
+  .pubbox .paper::before{
+    content:counter(paperno) ".";
+    position:absolute;left:0;top:20px;
+    font-family:"IBM Plex Mono",monospace;font-size:.85rem;font-weight:500;
+    color:var(--ink-soft);width:26px;text-align:right;
+  }
+  .pubbox .paper:first-of-type::before{top:2px;}
+
+</style>
 </head>
 <body>
 <header class="nav">
@@ -27,14 +58,11 @@
 
 <main>
   <section class="page">
-    <p class="eyebrow">Under Review &amp; In Progress</p>
-    <h2>Working Papers</h2>
-
-    <div class="paper">
+    <h2>Working Papers</h2>    <div class="pubbox">
+      <div class="paper">
       <div class="title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4473848">Corporate delegation of decision rights and firm performance</a></div>
+      <div class="meta">Revise &amp; resubmit, 3rd round (FT50 journal)</div>
       <div class="authors">with Junwei Xia</div>
-      <div class="meta">Revise &amp; resubmit, 3rd round (FT50 journal) &middot; <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4473848">SSRN</a></div>
-      <span class="tag rr">R&amp;R</span>
       <div class="disclosures">
         <details class="abstract"><summary>Abstract (as of March 2026)</summary><p>Despite the importance of internal decision-making for corporate outcomes, we know
 little about the role of within-firm delegation of decision rights. We use confidential survey data
@@ -58,9 +86,8 @@ consistent with delegation not being a monolithic governance choice.</p></detail
 
     <div class="paper">
       <div class="title"><a href="https://papers.ssrn.com/abstract=6995458">Corporate competitive externalities of US government financial assistance</a></div>
+      <div class="meta">Revise &amp; resubmit, 2nd round (FT50 journal)</div>
       <div class="authors">with Elisa Casi and Costanza Cincotta</div>
-      <div class="meta">Revise &amp; resubmit, 2nd round (FT50 journal) &middot; <a href="https://papers.ssrn.com/abstract=6995458">SSRN</a></div>
-      <span class="tag rr">R&amp;R</span>
       <div class="disclosures">
         <details class="abstract"><summary>Abstract (as of June 2026)</summary><p>We investigate the competitive consequences of government financial assistance by
 examining non-assisted firms operating in the same product market as assisted firms. Using a
@@ -81,9 +108,8 @@ benefits some firms at the competitive expense of others.</p></details>
 
     <div class="paper">
       <div class="title">Competitive effects of rival firms&rsquo; negative tax news</div>
-      <div class="authors">with Preetika Joshi</div>
       <div class="meta">Under review (FT50 journal)</div>
-      <span class="tag">Under Review</span>
+      <div class="authors">with Preetika Joshi</div>
       <div class="disclosures">
         <details class="abstract"><summary>Abstract (as of July 2026)</summary><p>We examine the competitive effects of firms’ publicly disclosed negative tax news incidents. Survey evidence indicates that executives seek to avoid negative corporate tax news due to expectations of negative stakeholder perceptions, with executives most concerned about customer stakeholders. Using transaction-level retail consumer purchases data, we find that following a severe negative tax news incident a firm’s sales decrease by 8.3 percent while its competitor firms’ sales increase by 8.2 percent. These findings are consistent with consumers substituting away from affected firm brands and towards competitor firm brands after a negative tax news incident and highlight the revenue implications for both affected and competitor firms. Heterogeneity analyses reveal that these relations are stronger when there is greater firm-brand name similarity and are concentrated in subsamples where the affected firm receives greater consumer attention following the negative incident, consistent with saliency as a necessary condition for a consumer response. Results are also concentrated in product markets classified as discretionary and in product markets where the affected firm is not dominant, consistent with retail consumers being more responsive to substitution when switching frictions are lower. Greater substitution towards competitor firm brands occurs in counties with higher educational attainment, income levels, and Democratic-affiliated residents, consistent with consumer responses driven by heterogeneous preferences within geographic markets. Our findings regarding the competitive effects of rival firms’ negative tax-related news incidents contribute to the ongoing debate as to whether reputation costs impose meaningful discipline on corporate tax behavior.</p></details>
         <details class="finding hidden"><summary>Key empirical finding</summary><div class="figure">[Add a figure or table here]</div></details>
@@ -92,9 +118,8 @@ benefits some firms at the competitive expense of others.</p></details>
 
     <div class="paper">
       <div class="title"><a href="https://aaahq.org/portals/0/documents/meetings/2026/ATA/3.02%20-%20Government%20Environmental%20Financial%20Assistance%20and%20Corporate%20Environmental%20Performance.pdf">Government environmental financial assistance and corporate environmental performance</a></div>
+      <div class="meta">Working paper</div>
       <div class="authors">with Costanza Cincotta</div>
-      <div class="meta">Working paper &middot; <a href="https://aaahq.org/portals/0/documents/meetings/2026/ATA/3.02%20-%20Government%20Environmental%20Financial%20Assistance%20and%20Corporate%20Environmental%20Performance.pdf">Paper (PDF)</a></div>
-      <span class="tag">Working Paper</span>
       <div class="disclosures">
         <details class="abstract"><summary>Abstract</summary><p>As of June 2026: Paper is under revision.</p></details>
         <details class="finding hidden"><summary>Key empirical finding</summary><div class="figure">[Add a figure or table here]</div></details>
@@ -103,9 +128,8 @@ benefits some firms at the competitive expense of others.</p></details>
 
     <div class="paper">
       <div class="title">Proposed organizational change and audit quality: An examination of EY&rsquo;s Project Everest</div>
-      <div class="authors">with Jessica Filosa, Nathan Goldman, and Andrew Imdieke</div>
       <div class="meta">Working paper</div>
-      <span class="tag">Working Paper</span>
+      <div class="authors">with Jessica Filosa, Nathan Goldman, and Andrew Imdieke</div>
       <div class="disclosures">
         <details class="abstract"><summary>Abstract</summary><p>As of June 2026: Paper is under revision.</p></details>
         <details class="finding hidden"><summary>Key empirical finding</summary><div class="figure">[Add a figure or table here]</div></details>
@@ -114,9 +138,8 @@ benefits some firms at the competitive expense of others.</p></details>
 
     <div class="paper">
       <div class="title">Government procurement sensitivity to corporate contractors&rsquo; negative reputation incidents</div>
-      <div class="authors">with Muhammad Azim and Preetika Joshi</div>
       <div class="meta">Working paper</div>
-      <span class="tag">Working Paper</span>
+      <div class="authors">with Muhammad Azim and Preetika Joshi</div>
       <div class="disclosures">
         <details class="abstract"><summary>Abstract (as of August 2026)</summary><p>We examine whether governments reduce procurement from corporate contractors
 involved in publicly disclosed incidents that pose reputational risk. Using a novel dataset
@@ -133,6 +156,7 @@ These findings extend evidence on reputational penalties to the public procureme
 and suggest that governments serve as a disciplining mechanism for contractor conduct.</p></details>
         <details class="finding hidden"><summary>Key empirical finding</summary><div class="figure">[Add a figure or table here]</div></details>
       </div>
+    </div>
     </div>
   </section>
 </main>
