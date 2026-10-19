@@ -84,7 +84,7 @@
   .atl-card .aorg{font-family:"IBM Plex Mono",monospace;font-size:.63rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin-top:6px;}
 
   /* Teaching Details list */
-  .teaching-details{list-style:none;margin:12px 0 0;padding:0;}
+  .teaching-details{list-style:none;margin:14px 0 0;padding:0;}
   .teaching-details li{margin:0 0 10px;}
   .syllabus-link{
     display:inline-flex;align-items:center;gap:12px;
@@ -102,6 +102,13 @@
   }
   .syllabus-link .syl-text{font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:.98rem;font-weight:500;}
   .syllabus-link .syl-sub{font-weight:400;color:var(--ink-soft);}
+
+  /* Evaluation callout under Teaching Details */
+  .eval-callout{
+    margin:14px 0 0;padding:14px 18px;
+    background:#FBFAF6;border:1px solid var(--rule);border-left:3px solid #041E42;border-radius:4px;
+    font-size:.98rem;color:var(--ink);line-height:1.5;
+  }
 </style>
 </head>
 <body>
@@ -278,9 +285,10 @@
     </div>
 
     <h3 class="subhead">Teaching Details</h3>
+    <p class="eval-callout">In AY25&ndash;26 when Georgetown MBA students were asked &ldquo;On a scale of 1&ndash;5, how likely would you be to recommend this course to others?,&rdquo; 91% answered 4 or 5.</p>
     <ul class="teaching-details">
       <li>
-        <a href="ACCT-6500-Syllabus-Spring2026-FX.pdf" class="syllabus-link">
+        <a href="ACCT-6500-FX-Syllabus-Spring_2026.pdf" class="syllabus-link">
           <span class="syl-icon" aria-hidden="true">PDF</span>
           <span class="syl-text">Corporate Financial Reporting Syllabus <span class="syl-sub">(Spring 2026)</span></span>
         </a>
